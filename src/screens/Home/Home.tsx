@@ -5,6 +5,7 @@ import { BatImage } from "../../components/BatImage/BatImage";
 import { Input } from "../../components/Input/Input";
 import { Button } from "../../components/Button/Button";
 import { useState } from "react";
+import generatePass from "../../services/passwordService";
 
 export const Home = () => {
   const [psw, setPsw] = useState("");
@@ -20,10 +21,10 @@ export const Home = () => {
         <Button
           label="⚡ GENERATE"
           onPress={() => {
-            setPsw("Ola");
+            setPsw(generatePass());
           }}
         />
-        <Button label="⚡ copy" onPress={() => {}} />
+        <Button label="✔️ copy" onPress={() => {}} />
       </View>
     </View>
   );
