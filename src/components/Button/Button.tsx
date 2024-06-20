@@ -1,11 +1,5 @@
-import React, { PropsWithChildren } from "react";
-import {
-  Pressable,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import React from "react";
+import { Text, TouchableOpacity } from "react-native";
 
 import { styles } from "./styles";
 

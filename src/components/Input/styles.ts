@@ -9,8 +9,6 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     height: 40,
-    // borderWidth: 2,
-    // borderColor: "white",
     borderRadius: 5,
     padding: 10,
   },

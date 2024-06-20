@@ -1,7 +1,6 @@
 import { Text, ToastAndroid, View } from "react-native";
 import { BatLogo } from "../../components/BatLogo/BatLogo";
 import styles from "./Style";
-import { BatImage } from "../../components/BatImage/BatImage";
 import { Input } from "../../components/Input/Input";
 import { Button } from "../../components/Button/Button";
 import { useState } from "react";
@@ -26,7 +25,6 @@ export const Home = () => {
       <View style={styles.logoContainer}>
         <Text style={styles.titleText}>BAT GERADOR DE SENHAS</Text>
         <BatLogo />
-        {/* <BatImage /> */}
       </View>
       <View style={styles.controlContainer}>
         <Input value={psw} onChange={(value) => setPsw(value)} />
