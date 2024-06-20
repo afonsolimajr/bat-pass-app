@@ -1,14 +1,26 @@
-import { Text, View } from "react-native";
+import { Text, ToastAndroid, View } from "react-native";
 import { BatLogo } from "../../components/BatLogo/BatLogo";
 import styles from "./Style";
 import { BatImage } from "../../components/BatImage/BatImage";
 import { Input } from "../../components/Input/Input";
 import { Button } from "../../components/Button/Button";
 import { useState } from "react";
+import * as Clipboard from "expo-clipboard";
 import generatePass from "../../services/passwordService";
 
 export const Home = () => {
   const [psw, setPsw] = useState("");
+
+  const copyToClipboard = async () => {
+    await Clipboard.setStringAsync(psw).then((value) => {
+      value &&
+        ToastAndroid.show(
+          "Copiado para área de transferência.",
+          ToastAndroid.SHORT
+        );
+    });
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
@@ -24,7 +36,12 @@ export const Home = () => {
             setPsw(generatePass());
           }}
         />
-        <Button label="✔️ copy" onPress={() => {}} />
+        <Button
+          label="✔️ copy"
+          onPress={() => {
+            copyToClipboard();
+          }}
+        />
       </View>
     </View>
   );
