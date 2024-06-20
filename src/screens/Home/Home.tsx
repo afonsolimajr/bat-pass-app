@@ -24,20 +24,20 @@ export const Home = () => {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        <Text style={styles.titleText}>BAT PASS GENERATOR</Text>
+        <Text style={styles.titleText}>BAT GERADOR DE SENHAS</Text>
         <BatLogo />
         {/* <BatImage /> */}
       </View>
       <View style={styles.controlContainer}>
         <Input value={psw} onChange={(value) => setPsw(value)} />
         <Button
-          label="⚡ GENERATE"
+          label="⚡ GERAR"
           onPress={() => {
             setPsw(generatePass());
           }}
         />
         <Button
-          label="✔️ copy"
+          label="✔️ copiar"
           onPress={() => {
             copyToClipboard();
           }}
