@@ -5,8 +5,8 @@ import { Home } from "./src/screens/Home/Home";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Home />
       <StatusBar style="auto" />
+      <Home />
     </View>
   );
 }
@@ -14,7 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    // backgroundColor: "cyan",
     alignItems: "center",
     justifyContent: "center",
   },
