@@ -5,13 +5,13 @@ import { styles } from "./styles";
 
 interface ButtonProps {
   label: string;
-  children: React.PropsWithChildren;
+  onPress: () => void;
 }
 
-export function Button(props: PropsWithChildren) {
+export function Button({ label, onPress }: ButtonProps) {
   return (
-    <Pressable style={styles.button}>
-      <Text style={styles.textButton}>{props.children}</Text>
+    <Pressable style={styles.button} onPress={onPress}>
+      <Text style={styles.textButton}>{label}</Text>
     </Pressable>
   );
 }
